@@ -1,0 +1,1 @@
+select * from Movie where director='Steven Spielberg';

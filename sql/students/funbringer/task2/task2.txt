@@ -1,0 +1,7 @@
+SELECT DISTINCT *
+FROM (
+	SELECT year
+	FROM Movie
+	INNER JOIN Rating
+	ON Movie.mid = Rating.mid
+	WHERE stars BETWEEN 4 and 5) Result;
