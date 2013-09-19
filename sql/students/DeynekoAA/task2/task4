@@ -1,0 +1,5 @@
+SELECT name
+FROM reviewer
+NATURAL JOIN rating 
+WHERE ratingDate is null;
+

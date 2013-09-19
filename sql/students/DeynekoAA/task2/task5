@@ -1,0 +1,5 @@
+SELECT Reviewer.name, Movie.title, Rating.stars, Rating.ratingDate 
+FROM Rating 
+NATURAL JOIN Reviewer 
+NATURAL JOIN Movie 
+ORDER BY Reviewer.name, Movie.title, Rating.stars;

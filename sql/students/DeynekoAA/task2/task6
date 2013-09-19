@@ -1,0 +1,5 @@
+SELECT reviewer.name,movie.title  
+FROM rating as t1 
+JOIN rating as t2 on (t1.stars > t2.stars)and(t1.ratingdate>t2.ratingdate)and(t1.mid=t2.mid)and(t1.rid = t2.rid) 
+JOIN reviewer on reviewer.rid=t1.rid 
+JOIN movie on movie.mid=t1.mid;
