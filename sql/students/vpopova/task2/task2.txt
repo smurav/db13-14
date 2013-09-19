@@ -1,0 +1,1 @@
+select year from Movie INNER JOIN Rating ON Movie.mid = Rating.mid where (stars > 3);
