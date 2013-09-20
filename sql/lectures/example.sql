@@ -16,6 +16,7 @@ insert into University values ('MSTU', 'Moscow', 18800);
 insert into University values ('NSTU', 'Novosibirsk', 25000);
 insert into University values ('DVFU', 'Vladivostok', 40000);
 insert into University values ('SSU', 'Saratov', 27000);
+insert into University values ('RUDN', 'Moscow', 25000);
 
 insert into Student values (1, 'Tschingis Khan', 4.2, 1000);
 insert into Student values (2, 'Petr I', 4.1, 1000);
@@ -32,6 +33,7 @@ insert into Student values (20, 'Nikola Tesla', 5.0, 50);
 insert into Student values (21, 'Albert Einstein', 4.9, 500);
 insert into Student values (22, 'Boris Godunov', 3.5, 2);
 insert into Student values (23, 'Stas Mikhailov', 3.3, 100);
+insert into Student values (24, 'Jason Statham ', 4.0, 100);
 
 insert into Apply values (1, 'MEPhI', 'CS', 'Y');
 insert into Apply values (1, 'SSU', 'BE', 'Y');
