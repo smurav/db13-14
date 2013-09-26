@@ -1,0 +1,4 @@
+SELECT DISTINCT name 
+FROM Reviewer
+JOIN Rating ON Rating.rID = Reviewer.rID
+WHERE ratingDate is NULL;
