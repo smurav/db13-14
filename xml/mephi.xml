@@ -6,6 +6,7 @@
         <department name="Информационные системы и технологии" number="36">
           <group entry_year="2011" number="1">
             <student name="Иванов Иван Иванович"/>
+            <student name="Семенихин Дмитрий Вячеславович"/>
           </group>
         </department>
       </sector>
