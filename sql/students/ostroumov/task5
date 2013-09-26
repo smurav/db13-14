@@ -1,0 +1,10 @@
+select Reviewer.name, Movie.title, Rating.stars, Rating.ratingdate from Movie full outer join Rating Using(mid) full outer join Reviewer using(rid) order by name;
+
+
+select Reviewer.name, Movie.title, Rating.stars, Rating.ratingdate from Movie full outer join Rating Using(mid) full outer join Reviewer using(rid) order by title;
+
+
+select Reviewer.name, Movie.title, Rating.stars, Rating.ratingdate from Movie full outer join Rating Using(mid) full outer join Reviewer using(rid) order by stars;
+
+
+
