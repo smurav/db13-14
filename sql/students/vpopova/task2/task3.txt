@@ -1,0 +1,1 @@
+select title from Movie where mid NOT IN(select mid from Rating);

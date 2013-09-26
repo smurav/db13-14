@@ -1,0 +1,4 @@
+SELECT title, rID 
+FROM Movie
+LEFT JOIN Rating ON Rating.mID = Movie.mID
+where rID is NULL;
