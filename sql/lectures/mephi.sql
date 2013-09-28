@@ -96,7 +96,7 @@ insert into Student (surname, name, email, gid) values ('Ukhobotova', 'Olga', nu
 
 insert into Student (surname, name, email, gid) values ('Vishtak', 'Tatyana', 'tmv529@mail.ru', 4);
 insert into Student (surname, name, email, gid) values ('Volchkov', 'Pavel', 'pashteter@mail.ru', 4);
-insert into Student (surname, name, email, gid) values ('Deineko', 'Alexey', '', 4);
+insert into Student (surname, name, email, gid) values ('Deineko', 'Alexey', 'deynekoaa@gmail.com', 4);
 insert into Student (surname, name, email, gid) values ('Ivanov', 'Dmitry', 'ivadmi5@gmail.com', 4);
 insert into Student (surname, name, email, gid) values ('Kirichenko', 'Tatyana', 'kirichenkotm@gmail.com', 4);
 insert into Student (surname, name, email, gid) values ('Lubennikova', 'Anastasia', 'lav1946@mail.ru', 4);
