@@ -131,10 +131,6 @@ insert into VCSUsage (sid, vid, login)
   where V.name='bitbucket' and S.surname='Polstyankin';
 
 insert into VCSUsage (sid, vid, login)
-  select S.sid, V.vid, cast('kostikpolst' as varchar(64)) as login from Student S,VCS V
-  where V.name='bitbucket' and S.surname='Polstyankin';
-
-insert into VCSUsage (sid, vid, login)
   select S.sid, V.vid, cast('achukhne' as varchar(64)) as login from Student S,VCS V
   where V.name='bitbucket' and S.surname='Chukhnenko';
 
