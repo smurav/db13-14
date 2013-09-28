@@ -1,5 +1,0 @@
-SELECT movie.title 
-FROM Movie
-LEFT JOIN Rating ON Rating.mID = Movie.mID 
-where Rating.mid is null;
-
