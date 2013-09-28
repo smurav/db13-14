@@ -5,9 +5,15 @@
       <sector name="Кибернетика" letter="К">
         <department name="Информационные системы и технологии" number="36">
           <group entry_year="2011" number="1">
-            <student name="Иванов Иван Иванович"/>
+            <student name="Иванов Дмитрий Олегович"/>
             <student name="Семенихин Дмитрий Вячеславович"/>
             <student name="Лубенникова Анастасия Витальевна"/>
+            <student name="Пономарев Сергей Владимирович" />
+            <student name="Дейнеко Алексей Александрович" />
+            <student name="Попова Валерия Евагеньевна"/>
+            <student name="Кириченко Татьяна Михайловна"/>
+            <student name="Ostroumov Alexander Genrikhovich">
+            <student name="Шамсутдинов Ринат Радикович"/>
           </group>
         </department>
       </sector>
