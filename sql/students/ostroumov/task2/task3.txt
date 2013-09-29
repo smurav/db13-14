@@ -1,0 +1,2 @@
+select Movie.title from Movie Where mid NOT IN( Select mid from Rating);
+
