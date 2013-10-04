@@ -1,7 +1,0 @@
-SELECT Highschooler1.name, Highschooler1.grade, Highschooler2.name, Highschooler2.grade FROM
-highschooler Highschooler1
-INNER JOIN likes Likes1 ON Highschooler1.Id = Likes1.Id1
-LEFT JOIN highschooler Highschooler2 ON Highschooler2.Id = Likes1.Id2
-INNER JOIN likes Likes2 ON Highschooler2.Id = Likes2.Id1
-LEFT JOIN highschooler Highschooler3 ON Highschooler3.Id = Likes2.Id2
-WHERE Highschooler1.name = Highschooler3.name AND Highschooler1.name < Highschooler2.name;
