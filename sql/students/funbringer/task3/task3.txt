@@ -4,4 +4,5 @@ INNER JOIN likes L1 ON H1.Id = L1.Id1
 LEFT JOIN highschooler H2 ON H2.Id = L1.Id2
 INNER JOIN likes L2 ON H2.Id = L2.Id1
 LEFT JOIN highschooler H3 ON H3.Id = L2.Id2
-WHERE H1.name = H3.name AND H1.name < H2.name;
+WHERE H1.name = H3.name AND H1.name < H2.name
+ORDER BY H1.name, H2.name ASC;
