@@ -1,5 +1,0 @@
-SELECT H1.name, H1.grade, H2.name, H2.grade FROM
-highschooler H1
-INNER JOIN likes on H1.Id = Id1
-LEFT JOIN highschooler H2 ON H2.Id = Id2
-WHERE H1.grade - H2.grade >= 2;
