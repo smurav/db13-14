@@ -1,1 +1,0 @@
-select title from movie where mid not in (select mid from rating);
