@@ -1,1 +1,2 @@
-select h1.name,h1.grade,h2.name,h2.grade from ((highschooler as h1 join likes on h1.id=likes.id1) join highschooler as h2 on h2.id=likes.id2) order by h1.name,h2.name;
+select h1.name,h1.grade,h2.name,h2.grade from ((((highschooler as h1 join likes as l1 on h1.id=l1.id1) join highschooler as h2 on h2.id=l1.id2) join  likes as l2 on h2.id=l2.id1) join highschooler as h3 on ((h3.id=l2.id2) and (h3.name=h1.name)) ) where (h1.name>h2.name) order by h1.name,h2.name;
+
