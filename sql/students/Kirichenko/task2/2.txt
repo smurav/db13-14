@@ -1,1 +1,0 @@
-select Movie.year from Rating INNER JOIN Movie USING(mid) WHERE (Rating.stars>3) order by year;
