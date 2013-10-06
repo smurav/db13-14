@@ -1,0 +1,5 @@
+Insert into
+Reviewer(name,rid)
+Values
+('Roget Ebert', '209')
+;
