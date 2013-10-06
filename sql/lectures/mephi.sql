@@ -89,7 +89,7 @@ insert into Student (surname, name, email, gid) values ('Zhukov', 'Kirill', null
 insert into Student (surname, name, email, gid) values ('Kazymova', 'Yulia', null, 3);
 insert into Student (surname, name, email, gid) values ('Melnik', 'Leonid', null, 3);
 insert into Student (surname, name, email, gid) values ('Ovchinnikov', 'Igor', null, 3);
-insert into Student (surname, name, email, gid) values ('Rybnikov', 'Vitaly', null, 3);
+insert into Student (surname, name, email, gid) values ('Rybnikov', 'Vitaly', 'vitaly.rybnikov@gmail.com', 3);
 insert into Student (surname, name, email, gid) values ('Sychugov', 'Alexey', null, 3);
 insert into Student (surname, name, email, gid) values ('Tolstov', 'Dmitry', null, 3);
 insert into Student (surname, name, email, gid) values ('Ukhobotova', 'Olga', null, 3);
