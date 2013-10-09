@@ -1,0 +1,7 @@
+insert into rating 
+(select 
+(select rid 
+from reviewer 
+where name='James Cameron')
+,mid,5,NULL
+ from movie);
