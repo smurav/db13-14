@@ -1,0 +1,5 @@
+SELECT h1.name FROM
+highschooler h1
+LEFT JOIN friend ON H1.Id = Id1
+LEFT JOIN highschooler h2 ON h2.Id = Id2
+where h2.name = 'Gabriel'
