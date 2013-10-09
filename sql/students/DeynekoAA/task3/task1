@@ -1,0 +1,2 @@
+select t1.name from ((highschooler as t1 join friend on t1.id=friend.id1) join highschooler as t2 on t2.id=friend.id2) where t2.name='Gabriel';
+

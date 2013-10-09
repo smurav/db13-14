@@ -1,0 +1,7 @@
+select h1.name, h1.grade, h2.name, h2.grade
+from highschooler h1
+join likes
+on h1.id = likes.id1
+join highschooler h2
+on h2.id = likes.id2
+where (h1.grade - h2.grade) >= 2;

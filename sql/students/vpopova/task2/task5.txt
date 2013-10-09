@@ -1,0 +1,10 @@
+select name, title, stars,ratingdate from movie join rating on rating.mid =
+movie.mid join reviewer on rating.rid=reviewer.rid order by name
+;
+select name, title, stars,ratingdate from movie join rating on rating.mid =
+movie.mid join reviewer on rating.rid=reviewer.rid order by title
+;
+select name, title, stars,ratingdate from movie join rating on rating.mid =
+movie.mid join reviewer on rating.rid=reviewer.rid order by stars
+;
+

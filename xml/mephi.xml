@@ -1,1 +1,19 @@
-Заготовка файла
+<?xml version="1.1" encoding='UTF-8' ?>
+<universities>
+	<university name="МИФИ">
+		<faculty name="КиБ">
+			<sector name="Кибернетика" letter="К">
+				<department name="Информационные системы и технологии" number="36">
+					<group entry year="2011" number="1">
+						<student name="Иванов Дмитрия Олегович" />
+						<student name="Пономарев Сергей Владимирович" />
+						<student name="Дейнеко Алексей Александрович" />
+					</group>
+				</department>
+			</sector>
+		</faculty>
+	</university>
+	<university name="МГУ">
+		<faculty name="ВМК">
+		</faculty>
+	</university>
