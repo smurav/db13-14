@@ -5,6 +5,5 @@ FROM movie
 JOIN rating
 ON rating.mid = movie.mid
 GROUP BY movie.mid
-HAVING AVG (stars) >= 4)
-;
+HAVING AVG (stars) >= 4);
 
