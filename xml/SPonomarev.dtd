@@ -22,7 +22,7 @@
 	entry_year	CDATA		#REQUIRED
 	number	ID				#REQUIRED
 >
-<!ELEMENT student>
+<!ELEMENT student EMPTY>
 <!ATTLIST student
 	name	CDATA			#REQUIRED
 >
