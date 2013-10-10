@@ -1,1 +1,0 @@
-delete from rating where (stars < 4) and mid in(select mid from movie where ((year<1970)or(year>2000)));
