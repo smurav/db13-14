@@ -15,12 +15,12 @@
 <!ELEMENT department (group*)>
 <!ATTLIST department
 	name	CDATA			#REQUIRED
-	number	CDATA				#REQUIRED
+	number	CDATA			#REQUIRED
 >
 <!ELEMENT group (student*)>
 <!ATTLIST group
 	entry_year	CDATA		#REQUIRED
-	number	CDATA				#REQUIRED
+	number	CDATA			#REQUIRED
 >
 <!ELEMENT student EMPTY>
 <!ATTLIST student
