@@ -2,21 +2,27 @@
 <!ATTLIST universities
    name CDATA #REQUIRED
 >
-<!ELEMENT university (faculty+)>
+<!ELEMENT university (faculty*)>
 <!ATTLIST university
    name CDATA #REQUIRED
 >
-<!ELEMENT sector (department+)>
+
+<!ELEMENT faculty (sector*)>
+<!ATTLIST faculty
+   name CDATA #REQUIRED
+>
+
+<!ELEMENT sector (department*)>
 <!ATTLIST sector
    name CDATA #REQUIRED
    letter CDATA #REQUIRED
 >
-<!ELEMENT department (group+)>
+<!ELEMENT department (group*)>
 <!ATTLIST department
    name CDATA #REQUIRED
    number CDATA #REQUIRED
 >
-<!ELEMENT group (student+)>
+<!ELEMENT group (student*)>
 <!ATTLIST group
    entry_year CDATA #REQUIRED
    number CDATA #REQUIRED
