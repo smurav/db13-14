@@ -1,6 +1,6 @@
 <!ELEMENT universities (university+)>
 <!ATTLIST universities
-   name CDATA #REQUIRED
+   name CDATA #IMPLIED
 >
 <!ELEMENT university (faculty*)>
 <!ATTLIST university
