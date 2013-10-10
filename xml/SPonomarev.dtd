@@ -10,17 +10,17 @@
 <!ELEMENT sector (department*)>
 <!ATTLIST sector
 	name	CDATA			#REQUIRED
-	letter	CDATA
+	letter	CDATA			#REQUIRED
 >
 <!ELEMENT department (group*)>
 <!ATTLIST department
 	name	CDATA			#REQUIRED
-	number	ID				#REQUIRED
+	number	CDATA			#REQUIRED
 >
 <!ELEMENT group (student*)>
 <!ATTLIST group
 	entry_year	CDATA		#REQUIRED
-	number	ID				#REQUIRED
+	number	CDATA			#REQUIRED
 >
 <!ELEMENT student EMPTY>
 <!ATTLIST student
