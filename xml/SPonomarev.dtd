@@ -10,7 +10,7 @@
 <!ELEMENT sector (department*)>
 <!ATTLIST sector
 	name	CDATA			#REQUIRED
-	letter	CDATA
+	letter	CDATA			#REQUIRED
 >
 <!ELEMENT department (group*)>
 <!ATTLIST department
