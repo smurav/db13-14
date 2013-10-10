@@ -1,2 +1,0 @@
-update movie set year=year+25 where mid in (select mid from rating group by rating.mid having avg(stars) >= 4);
-
