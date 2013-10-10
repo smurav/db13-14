@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding='UTF-8' ?>
-<!DOCTYPE universities SYSTEM "universities.dtd">
 <universities>
   <university name="МИФИ">
     <faculty name="Кибернетика и Безопасность">
       <sector name="Кибернетика" letter="К">
-        <department name="Информационные системы и технологии" number="36">
+        <department id="d36" name="Информационные системы и технологии" number="36">
           <group entry_year="2011" number="1">
             <student name="Иванов Дмитрий Олегович"/>
             <student name="Семенихин Дмитрий Вячеславович"/>

@@ -17,6 +17,7 @@
 >
 <!ELEMENT department (group*)>
 <!ATTLIST department
+   id ID #IMPLIED
    name CDATA #REQUIRED
    number CDATA #REQUIRED
 >

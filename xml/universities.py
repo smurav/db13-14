@@ -4,16 +4,26 @@
 import libxml2
 import optparse
 
+def print_xml(xml_file):
+  doc = libxml2.parseFile(xml_file)
+  root = doc.children
+  print root.name
+  for children in root.children:
+    if children.type == "element":
+	  print children.name
+	  print children.properties
+    
+  doc.freeDoc()
+
 def open(xml_file):
   """Открытие xml файла"""
   print "Открываем документ " + xml_file
   doc = libxml2.parseFile(xml_file)
   ctxt = doc.xpathNewContext()
-  
   students = ctxt.xpathEval("//student[../@entry_year<2011]")
   #students = ctxt.xpathEval("//student")
   for student in students:
-    print student.prop('name');
+    print student.prop('name')
   doc.freeDoc()
   ctxt.xpathFreeContext()
   
@@ -40,7 +50,8 @@ def main():
   options, arguments = op.parse_args()
   arguments_count = len(arguments)
   if arguments_count == 1:
-    open(arguments[0])
+	print_xml(arguments[0])
+    #open(arguments[0])
   elif arguments_count == 2:
     validate(arguments[0], arguments[1])
   else:
