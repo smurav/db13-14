@@ -1,5 +1,5 @@
 DELETE FROM rating
-WHERE stars < 4 OR mid IN 
+WHERE stars < 4 AND mid IN 
 (SELECT movie.mid 
 FROM movie
 JOIN rating
