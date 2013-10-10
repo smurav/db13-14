@@ -1,0 +1,5 @@
+insert into
+rating(rid,mid,stars,ratingdate)
+select rid, mid, '5' , NULL from movie
+join reviewer
+where name = 'James Cameron';

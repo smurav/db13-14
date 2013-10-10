@@ -1,0 +1,9 @@
+SELECT h1.name, h1.grade, h2.name, h2.grade FROM
+highschooler h1
+JOIN likes l1 ON h1.id = l1.id1
+JOIN highschooler h2 ON h2.id = l1.id2
+JOIN likes l2 ON h2.id = l2.id1
+JOIN highschooler h3 ON h3.id = l2.id2
+WHERE h1.name = h3.name AND h1.name < h2.name
+ORDER BY h1.name, h2.name;
+

@@ -1,0 +1,6 @@
+update movie 
+set year=year+25 
+where mid in 
+(select t1.mid from movie t1 inner join 
+(select mid, avg(stars) stars from rating group by mid)
+t2 on t1.mid=t2.mid where stars >=4);
