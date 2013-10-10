@@ -1,13 +1,10 @@
 <!ELEMENT universities (university*)>
-<!ATTLIST universities
-   name CDATA #REQUIRED
->
 <!ELEMENT university (faculty*)>
 <!ATTLIST university
    name CDATA #REQUIRED
 >
 <!ELEMENT faculty (sector*)>
-<!ATTLIST sector
+<!ATTLIST faculty
    name CDATA #REQUIRED
 >
 <!ELEMENT sector (department*)>
