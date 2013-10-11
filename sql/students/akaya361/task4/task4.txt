@@ -1,0 +1,4 @@
+DELETE FROM rating
+WHERE ((rating.mid IN
+(SELECT mid FROM movie
+WHERE ((year<1970)OR(year>2000))))AND(rating.stars<4));
