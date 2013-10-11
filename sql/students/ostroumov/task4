@@ -1,2 +1,0 @@
-select Reviewer.name from Reviewer Left Join Rating ON Rating.rId = Reviewer.rid where Rating.ratingdate is null;
-

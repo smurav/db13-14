@@ -1,0 +1,5 @@
+select h1.name from highschooler h1 
+join friend on friend.id1 = h1.id 
+join highschooler h2 on h2.id = friend.id2 
+where h2.name = 'Gabriel';
+

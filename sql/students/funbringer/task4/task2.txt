@@ -1,0 +1,7 @@
+INSERT INTO rating(rid, mid, stars, ratingDate)
+SELECT (
+		SELECT rid
+		FROM reviewer
+		WHERE name = 'James Cameron'
+	), mid, 5, NULL
+FROM movie;

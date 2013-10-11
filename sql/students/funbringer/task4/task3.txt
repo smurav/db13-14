@@ -1,0 +1,9 @@
+UPDATE movie M1
+SET year = year + 25
+WHERE EXISTS (
+	SELECT AVG(stars), rating.mid
+	FROM movie M2
+	JOIN rating ON M2.mid = rating.mid
+	GROUP BY rating.mid
+	HAVING AVG(stars) >= 4 AND rating.mid = M1.mid 
+);
