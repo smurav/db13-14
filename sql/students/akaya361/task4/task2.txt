@@ -1,0 +1,6 @@
+INSERT INTO rating
+rating(rid,mid,stars)
+SELECT rid, mid, '5'
+FROM movie
+CROSS JOIN reviewer
+WHERE name = 'James Cameron';

@@ -1,0 +1,9 @@
+UPDATE movie
+SET year = year + 25
+WHERE mid IN (SELECT movie.mid
+FROM movie
+JOIN rating
+ON rating.mid = movie.mid
+GROUP BY movie.mid
+HAVING AVG (stars) >= 4);
+

@@ -1,1 +1,3 @@
-select name from rating natural join reviewer where ratingdate is null;
+select name from rating 
+natural join reviewer 
+where ratingdate is null;

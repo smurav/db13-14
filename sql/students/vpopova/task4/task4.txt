@@ -1,0 +1,8 @@
+DELETE FROM rating
+WHERE stars < 4 AND mid IN 
+(SELECT movie.mid 
+FROM movie
+JOIN rating
+ON rating.mid = movie.mid
+WHERE year < 1970 OR year > 2000);
+

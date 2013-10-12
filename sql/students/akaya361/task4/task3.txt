@@ -1,0 +1,6 @@
+UPDATE movie
+SET year=year+25
+WHERE movie.mid IN
+(SELECT mid FROM
+(SELECT mid, avg(stars) FROM rating GROUP BY mid) as a
+WHERE a.avg>3);
