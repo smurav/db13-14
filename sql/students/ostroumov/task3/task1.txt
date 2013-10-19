@@ -1,0 +1,4 @@
+select first.name from (
+(highschooler as first join friend on first.id=friend.id1) 
+join highschooler as second on second.id = friend.id2) 
+where second.name='Gabriel';

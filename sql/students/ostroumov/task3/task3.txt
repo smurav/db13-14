@@ -1,0 +1,11 @@
+select first.name,first.grade,second.name,second.grade from 
+(
+(
+(
+(highschooler as first join likes as fourth on first.id=fourth.id1)
+join highschooler as second on second.id=fourth.id2) 
+join likes as fifth on second.id=fifth.id1)
+join highschooler as third on ((third.id=fifth.id2) and (third.name=first.name)))
+where (first.name>second.name) order by first.name,second.name;
+
+
