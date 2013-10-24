@@ -1,20 +1,42 @@
 #!/usr/bin/python
 #-*- coding: UTF-8 -*-
 
-import libxml2
 import optparse
 
 from xml.dom.minidom import *
 
 def print_xml(xml_file):
 	
-  doc = libxml2.parseFile(xml_file)
-  root = doc.children
-  for children in root.children:
-    if children.type == "element":
-	  print "{0}: {1}".format(children.name, children.properties )
-    
-  doc.freeDoc()
+  doc = parse(xml_file)	
+  nodeList = doc.childNodes
+  print ""
+  for node in nodeList:
+		print node.toxml()
+  print ""
+
+def add_att(xml_file, name, att_name) :
+	doc = parse(xml_file)
+	nodes = doc.getElementsByTagName(name)
+	for node in nodes:
+		node.setAttribute(att_name, "")
+	nodeList = doc.childNodes
+	print ""
+	for node in nodeList:
+		print node.toxml()
+	print ""
+	
+	
+def set_att(xml_file, name, node_id, att_name, att_val) :
+	doc = parse(xml_file)
+	nodes = doc.getElementsByTagName(name)
+	for node in nodes:
+		if node.attributes['name'].value == node_id :
+			node.setAttribute(att_name, att_val)
+	nodeList = doc.childNodes
+	print ""
+	for node in nodeList:
+		print node.toxml()
+	print ""
   
 def add_node(xml_file, name, tag_name, attribute_name, attribute_value, value) :
 	
@@ -63,13 +85,21 @@ def main():
   
   elif arguments_count == 2:
     delete_node(arguments[0], arguments[1])
+    
+  elif arguments_count == 3:
+	add_att(arguments[0], arguments[1], arguments[2])
+	
+  elif arguments_count == 5 :
+	set_att(arguments[0], arguments[1], arguments[2], arguments[3], arguments[4] )
 
+	
   elif arguments_count == 6:
     add_node(arguments[0], arguments[1], arguments[2], 
     arguments[3], arguments[4], arguments[5])
   else:
-    print "Arguments:\nto add: file_name, toWhere, tag_name, att_name, att_val, val\nto delete: file_name, tag_name"
-    
+    print "Arguments:\nto add: file_name, parent, tag_name, att_name, att_val, val\nto delete: file_name, tag_name"
+    print "to add_att: xml_file, name, att_name"
+    print "to set_att: xml_file, name, node_id, att_name, att_val"
 if __name__ == '__main__':
   main()
 
