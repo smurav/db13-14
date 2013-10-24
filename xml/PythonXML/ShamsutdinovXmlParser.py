@@ -50,23 +50,25 @@ def delete_node(xml_file, name) :
 	print ""
 
 def main():
-  op = optparse.OptionParser(description = U"Неверное число аргумнтов",
-                             prog="university.py",
+  op = optparse.OptionParser(description = U"Парсер Xml",
+                             prog="ShamsutdinovXmlParser.py",
                              version="0.1",
-                             usage="%prog xml_file [dtd_file]")
+                             usage="%prog xml_file")
   options, arguments = op.parse_args()
   arguments_count = len(arguments)
+  
+  
   if arguments_count == 1:
     print_xml(arguments[0])
   
-  elif arguments_count == 3:
-    delete_node(arguments[0], arguments[2])
+  elif arguments_count == 2:
+    delete_node(arguments[0], arguments[1])
 
   elif arguments_count == 6:
     add_node(arguments[0], arguments[1], arguments[2], 
     arguments[3], arguments[4], arguments[5])
   else:
-    op.print_help()
+    print "Arguments:\nto add: file_name, toWhere, tag_name, att_name, att_val, val\nto delete: file_name, tag_name"
     
 if __name__ == '__main__':
   main()
