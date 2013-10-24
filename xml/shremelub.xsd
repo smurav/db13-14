@@ -1,39 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<xs:element name="universities"/>
-    <xs:element name="university" type = "xs:info"/>
-      <xs:element name="faculty" type = "xs:info"/>
-        <xs:element name="sector" type = "xs:secinfo"/>
-          <xs:element name="departmnet" type = "xs:depinfo"/>
-            <xs:element name="group" type = "xs:groupinfo"/>
-              <xs:element name="student" type = "xs:info"/>  
+  <xs:element name="universities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="university" type="university"/>
+      </xs:sequence>       
+    </xs:complexType>
+  </xs:element>
+  
+    <xs:complexType name ="university">
+      <xs:sequence>
+        <xs:element name="faculty" type="faculty"/>
+      </xs:sequence>
+	  <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
 
-	<xs:complexType name = "info">
-		<xs:attribute name="name" type="xs:string"/>
-	</xs:complexType>		
-	
-	<xs:complexType name = "groupinfo">	
-		<xs:sequence>
-			<xs:attribute name="number" type="xs:positive-integer"/>
-			<xs:attribute name="entry_year" type="xs:positive-integer"/>
-		</xs:sequence>
-	</xs:complexType>	
-	
-	<xs:complexType name = "secinfo">	
-		<xs:complexContent>
-			<xs:extention base = "info">
-				<xs:attribute name="letter" type="xs:string"/>
-			</xs:extention>
-		</xs:complexContent>
-	</xs:complexType>	
-	
-	<xs:complexType name = "depinfo">	
-		<xs:complexContent>
-			<xs:extention base = "info">
-				<xs:attribute name="number" type="xs:integer"/>
-			</xs:extention>
-		</xs:complexContent>
-	</xs:complexType>	
-		
+
+  <xs:complexType name="faculty">
+    <xs:sequence>
+      <xs:element name="sector" type="sector"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="sector">
+    <xs:sequence>
+      <xs:element name="department" type="department"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"/>
+    <xs:attribute name="letter" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:complexType name="department">
+    <xs:sequence>
+      <xs:element name="group" type="group"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"/>
+    <xs:attribute name="number" type="xs:decimal"/>
+  </xs:complexType>
+
+  <xs:complexType name="group">
+    <xs:sequence>
+      <xs:element name="student" type="student"/>
+    </xs:sequence>
+    <xs:attribute name="entry_year" type="xs:decimal"/>
+    <xs:attribute name="number" type="xs:decimal"/>
+  </xs:complexType>
+
+  <xs:complexType name="student">
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+
 </xs:schema>
+
