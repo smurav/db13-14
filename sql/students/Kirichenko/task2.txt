@@ -1,7 +1,0 @@
-insert into
-rating(rid,mid,stars)
-select rid, movie.mid, '5'
-from (movie join reviewer
-on director ='James Cameron' 
-and name = 'James Cameron');
-
