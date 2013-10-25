@@ -1,0 +1,4 @@
+select table1.name, table1.grade, table2.name, table2.grade from (highschooler join likes on id = id1) as table1 
+join highschooler as table2 on table1.id2 = table2.id
+and table1.grade - table2.grade > 1;
+
