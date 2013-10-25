@@ -1,2 +1,0 @@
-insert into rating (mid)select mid from movie where director = 'James Cameron';
-update rating set rid = (select max(rid) from rating) + 1, stars = 5where rid is NULL; 
