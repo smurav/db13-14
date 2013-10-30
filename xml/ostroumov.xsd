@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="universities">
+		<xs:complexType name = "universities">
+			<xs:sequence>
+				<xs:element name="university" type="university" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element  name = "university">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="faculty" type="faculty" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element  name = "faculty">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sector" type="sector" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string"/>
+			<xs:attribute name="letter" type="xs:string"/>
+		</xs:complexType>
+
+		
+	<xs:element  name = "sector">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="department" type="department" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string"/>
+			<xs:attribute name="number" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element  name = "department">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="group" type="group" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="entry_year" type="xs:string"/>
+			<xs:attribute name="number" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element  name = "group">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="student" type="student" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+
+
+</xs:schema>
