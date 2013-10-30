@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-<?xml version="1.1" encoding='UTF-8' ?>
-<universities>
-	<university name="МИФИ">
-		<faculty name="КиБ">
-			<sector name="Кибернетика" letter="К">
-				<department name="Информационные системы и технологии" number="36">
-					<group entry year="2011" number="1">
-						<student name="Иванов Дмитрия Олегович" />
-						<student name="Пономарев Сергей Владимирович" />
-						<student name="Дейнеко Алексей Александрович" />
-					</group>
-				</department>
-			</sector>
-		</faculty>
-	</university>
-	<university name="МГУ">
-		<faculty name="ВМК">
-		</faculty>
-	</university>
-=======
 <?xml version="1.0" encoding='UTF-8' ?>
 <universities>
   <university name="МИФИ">
@@ -34,6 +13,20 @@
             <student name="Попова Валерия Евагеньевна"/>
             <student name="Кириченко Татьяна Михайловна"/>
             <student name="Ostroumov Alexander Genrikhovich" />
+            <student name="Ostroumov" />
+            <student name="Шамсутдинов Ринат Радикович"/>
+          </group>
+        </department>
+      </sector>
+    </faculty>
+<faculty name="Физика">
+      <sector name="Теор физ" letter="Т">
+        <department name="цуатмоцут" number="45">
+          <group entry_year="2011" number="1">
+            <student name="Иванов Дмитрий Олегович"/>
+            <student name="Семенихин Дмитрий Вячеславович"/>
+            <student name="Ostroumov Alexander Genrikhovich" />
+            <student name="Ostroumov" />
             <student name="Шамсутдинов Ринат Радикович"/>
           </group>
         </department>
@@ -43,4 +36,3 @@
   <university name="МГУ">
   </university>
 </universities>
->>>>>>> 16add804ace6d36213102025191bdff4b4613063
