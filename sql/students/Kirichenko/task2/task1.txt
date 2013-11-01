@@ -1,1 +1,2 @@
-select * from Movie where direcor='Steven Spielberg';
+select * from Movie
+where direcor='Steven Spielberg';
