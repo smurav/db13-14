@@ -1,4 +1,4 @@
-A	R.B		S.B		C	D
+A      R.B	       S.B		C	D
 
 1	2		2		4	6
 1	2		4		6	8
