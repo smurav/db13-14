@@ -30,7 +30,7 @@ def set_att(xml_file, name, node_id, att_name, att_val) :
 	doc = parse(xml_file)
 	nodes = doc.getElementsByTagName(name)
 	for node in nodes:
-		if node.attributes['name'].value == node_id :
+		if node.attributes['name'].value != node_id :
 			node.setAttribute(att_name, att_val)
 	nodeList = doc.childNodes
 	print ""
