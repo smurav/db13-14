@@ -111,7 +111,7 @@ def open(xml_file):
 	task4(doc, 2011, 1, 36)
 	task5(doc, 36)
 	task6(doc, 36)
-	task7(doc, 2011, 1, 3)
+	task7(doc, 2011, 1, 36)
 	task8(doc)
 
 	doc.freeDoc()
