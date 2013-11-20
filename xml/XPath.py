@@ -52,7 +52,6 @@ def task4(xml_file, group):
 def task5(xml_file, department):
 	doc = libxml2.parseFile(xml_file)
 	ctxt = doc.xpathNewContext()
-	print department
 	students = ctxt.xpathEval("//department[@name="+department+"]//group//student")
 	print len(students)
 	ctxt.xpathFreeContext()
@@ -73,11 +72,34 @@ def task7(xml_file, group):
 	now = datetime.datetime.now()
 	letter = ctxt.xpathEval("//group[@number="+group+"]/../..")
 	year = ctxt.xpathEval("//group[@number="+group+"]")
-	year1 = now.year - year[0].prop('entry_year')
-	print(letter.prop('letter') + year1+"-"+year.prop('number'))
+	department = ctxt.xpathEval("//group[@number="+group+"]/..")
+	year1 = year[0].prop('entry_year')
+	for let in letter:
+		for yea in year:
+			for dep in department:
+				print(let.prop('letter') + year1+ "-" + dep.prop('number') + yea.prop('number'))
 	ctxt.xpathFreeContext()
 	doc.freeDoc()
 
+def task8(xml_file):
+	doc = libxml2.parseFile(xml_file)
+	ctxt = doc.xpathNewContext()
+	faculties = ctxt.xpathEval("//faculty")
+	count = []
+    
+	for faculty in faculties:
+		ctxt.setContextNode(faculty)
+		count += [len(ctxt.xpathEval("sector/department/group/student"))]
+
+	max_index = count.index(max(count))
+	min_index = count.index(min(count))
+
+	ctxt.setContextNode(faculties[max_index])
+	print "Max: " + ctxt.xpathEval("@name")[0].content
+	ctxt.setContextNode(faculties[min_index])
+	print "Min: " + ctxt.xpathEval("@name")[0].content
+
+	ctxt.xpathFreeContext()
 
 def main(argv):
 	op = optparse.OptionParser(description = U"Пример использования парсера",
@@ -93,7 +115,7 @@ def main(argv):
 	options, arguments = op.parse_args()
 	arguments_count = len(arguments)
 
-	task6(arguments[0])
+	task8(arguments[0])
 	
 	if options.year:
 		students_in_year(arguments[0], options.year)
