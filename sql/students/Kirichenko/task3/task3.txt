@@ -1,0 +1,8 @@
+select t1.name, t1. grade, t2.name, t2.grade from (highschooler join likes on id = id1) as t1 
+join highschooler as t2 on t1.id2 = t2.id 
+join likes as t3 on t2.id = t3.id1 
+join highschooler as t4 on t4.id = t3.id2 
+where t1.name = t4.name 
+and t1.name<t2.name 
+order by t1.name, t2.name;
+

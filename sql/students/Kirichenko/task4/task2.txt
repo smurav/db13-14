@@ -1,2 +1,7 @@
-insert into rating (mid)select mid from movie where director = 'James Cameron';
-update rating set rid = (select max(rid) from rating) + 1, stars = 5where rid is NULL; 
+insert into
+rating(rid,mid,stars)
+select rid, movie.mid,'5'
+from (movie join reviewer
+on director ='James Cameron' 
+and name = 'James Cameron');
+
