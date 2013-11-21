@@ -27,24 +27,6 @@
             <student name="Персиянов Алексей"/>
             <student name="Фадеева Анна"/>
             <student name="Щербаков Павел"/>
-          </group>
-        </department>
-        <department name="Кибернетика" number="22">
-          <group entry_year="2011" number="1">
-            <student name="Бочаров Сергей"/>
-          </group>
-          <group entry_year="2011" number="2">
-            <student name="Новиков Леонид"/>
-         </group>
-        </department>
-      </sector>
-      <sector name="Безопасность" letter="Б">
-        <department name="Безопасность" number="1">
-          <group entry_year="2011" number="111">
-            <student name="Железняков Евгений"/>
-          </group>
-          <group entry_year="2011" number="222">
-            <student name="Колесников Павел"/>
          </group>
         </department>
       </sector>
