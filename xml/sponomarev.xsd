@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="universities">
+        <xs:complexType>
+        	<sequence>
+                <xs:element name="university" type="xs:university"/>
+            </sequence>
+        </xs:complexType> 
+    </xs:element>           
+        
+        <xs:complexType name="university">
+        	<sequence>
+                <xs:element name="faculty" type="xs:faculty"/>
+                <xs:attribute name="name" type="xs:string" />
+            </sequence>
+        </xs:complexType>                
+        
+        <xs:complexType name="faculty">
+        	<sequence>
+                <xs:element name="sector" type="xs:sector"/>
+                <xs:attribute name="name" type="xs:string" />
+            </sequence>
+        </xs:complexType>        
+        
+        <xs:complexType name="sector">
+        	<sequence>
+                <xs:element name="department" type="xs:department"/>
+                <xs:attribute name="name" type="xs:string" />
+                <xs:attribute name="letter" type="xs:string" />
+            </sequence>
+        </xs:complexType>   
+
+        <xs:complexType name="department">
+        	<sequence>
+                <xs:element name="group" type="xs:group"/>
+                <xs:attribute name="name" type="xs:string" />
+                <xs:attribute name="number" type="xs:integer" />
+            </sequence>
+        </xs:complexType> 
+                
+        <xs:complexType name="group">
+        	<sequence>
+                <xs:element name="student" type="xs:student"/>
+                <xs:attribute name="entry_year" type="xs:integer" />
+                <xs:attribute name="number" type="xs:integer" />
+            </sequence>
+        </xs:complexType> 
+
+        <xs:complexType name="student">
+        	<sequence>
+                <xs:attribute name="name" type="xs:string" />
+            </sequence>
+        </xs:complexType> 
+                
+</xs:schema>

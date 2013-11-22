@@ -73,4 +73,61 @@ def main():
     open(arguments[0])
     
 if __name__ == '__main__':
-  main()
+  main(sys.arguments)
+
+
+
+
+
+
+
+
+  #!/usr/bin/env python
+#-*- coding: UTF-8 -*-
+
+import libxml2
+import optparse
+import gettext
+import sys, locale
+
+def open ( xml_file ):
+  print "Открываем документ " + xml_file
+  doc = libxml2.parseFile( xml_file )
+  ctxt = doc.xpathNewContext ()
+  students = ctxt.xpathEval("//students")
+  for student in students:
+    print student.prop('name');
+  doc.freeDoc()
+  ctxt.xpathFreeContext()
+
+def kaf ( xml_file ):
+  print "Открываем документ " + xml_file
+  doc = libxml2.parseFile( xml_file )
+  ctxt = doc.xpathNewContext ()
+  students = ctxt.xpathEval("department")
+  #students = ctxt.xpathEval("//group[@entry_year=2011]/student")
+  for student in students:
+    print student.prop('name');
+  doc.freeDoc()
+  ctxt.xpathFreeContext()
+
+def main (argv):
+  op = optparse.OptionParser(description = U"Пример использования парсера",
+        prog="xml",
+        version="0.1",
+        usage=U"%prog [ключ]... xml_file")
+  op.add_option("-1", dest="kaf", help=U"Вывести список кафедр факультета КиБ")
+  #op.add_option("-s", "--xsd", dest="xsd", help=U"XML схема", metavar="XSD_FILE")
+  op.get_option('--version').help=U"показать версию и выйти"
+  op.get_option('--help').help=U"показать помощь и выйти"
+  if len(argv) == 2:
+    op.print_help()
+  elif options.kaf:
+    kaf(argv[0], options.dtd)
+  elif options.xsd:
+    validate_xsd(arguments[0], options.xsd)
+  else:
+    open(arguments[0])
+
+if __name__ == '__main__':
+  main(sys.argv)
