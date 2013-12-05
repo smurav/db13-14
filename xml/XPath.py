@@ -13,7 +13,7 @@ def open(xml_file):
 	ctxt = doc.xpathNewContext()
 	students = ctxt.xpathEval("//osm//relation[@id='2784645']//tag")
 	for student in students:
-		print("K: " + student.prop('k') + " V: " + student.prop('v'));
+		print("K: " + student.prop('k') + " V: " + student.prop('v'))
 	ctxt.xpathFreeContext()
 	doc.freeDoc()
 	
