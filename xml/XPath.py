@@ -19,6 +19,8 @@ def open(xml_file):
 	students = ctxt.xpathEval("//way[@id='41601758']//nd")
 	X = []
 	Y = []
+	r_major = 6378137.000
+	r_minor = 6356752.314
 	Per = 0
 	for student in students:
 		points = ctxt.xpathEval("//node[@id=" + student.prop('ref') + "]")
@@ -31,9 +33,23 @@ def open(xml_file):
 			Y.append(y)
 			print(str(x) + " " + str(y))
 			
+			
 	for i in range(len(X) - 1):
 		Per += math.sqrt(math.pow(X[i]-X[i+1], 2) + math.pow(Y[i]-Y[i+1], 2) )
-	print(str(Per))
+	print("Perimetr = "+ str(Per))
+	print("======================================================")
+	
+	students = ctxt.xpathEval("//tag[@k='public_transport']/..")	
+	for student in students:
+		x = r_major*math.radians(float(student.prop('lon')))
+		y = r_major*math.radians(float(student.prop('lat')))
+		x2 = r_major*math.radians(37.6650850)
+		y2 = r_major*math.radians(55.6503677)
+		if ((math.sqrt(math.pow(x-x2, 2) + math.pow(y-y2, 2))) < 100000 ) :
+			print student.prop('id')
+	
+			
+	
 			
 	ctxt.xpathFreeContext()
 	doc.freeDoc()
