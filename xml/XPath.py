@@ -5,6 +5,7 @@ import sys
 import libxml2
 import optparse
 import datetime
+import math
 
 from xml.dom.minidom import *
 
@@ -14,6 +15,26 @@ def open(xml_file):
 	students = ctxt.xpathEval("//osm//relation[@id='2784645']//tag")
 	for student in students:
 		print("K: " + student.prop('k') + " V: " + student.prop('v'))
+	print("=======================================================")
+	students = ctxt.xpathEval("//way[@id='41601758']//nd")
+	X = []
+	Y = []
+	Per = 0
+	for student in students:
+		points = ctxt.xpathEval("//node[@id=" + student.prop('ref') + "]")
+		for point in points :
+			r_major = 6378137.000
+			r_minor = 6356752.3142
+			x = r_major*math.radians(float(point.prop('lon')))
+			y = r_major*math.radians(float(point.prop('lat')))
+			X.append(x)
+			Y.append(y)
+			print(str(x) + " " + str(y))
+			
+	for i in range(len(X) - 1):
+		Per += math.sqrt(math.pow(X[i]-X[i+1], 2) + math.pow(Y[i]-Y[i+1], 2) )
+	print(str(Per))
+			
 	ctxt.xpathFreeContext()
 	doc.freeDoc()
 	
