@@ -6,11 +6,14 @@ import libxml2
 import optparse
 import datetime
 
+from xml.dom.minidom import *
+
 def open(xml_file):
 	doc = libxml2.parseFile(xml_file)
 	ctxt = doc.xpathNewContext()
-	students = ctxt.xpathEval("//student")
-	print students
+	students = ctxt.xpathEval("//osm//relation[@id='2784645']//tag")
+	for student in students:
+		print(student.prop('k') + student.prop('v'));
 	ctxt.xpathFreeContext()
 	doc.freeDoc()
 	
@@ -115,7 +118,7 @@ def main(argv):
 	options, arguments = op.parse_args()
 	arguments_count = len(arguments)
 
-	task8(arguments[0])
+	open(arguments[0])
 	
 	if options.year:
 		students_in_year(arguments[0], options.year)
