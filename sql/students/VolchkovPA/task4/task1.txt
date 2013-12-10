@@ -1,3 +1,0 @@
-insert into
-reviewer(name,rid)
-values('Roget Ebert', '209');

@@ -1,1 +1,0 @@
-select name,title from rating as t1 join rating as t2 on (t1.stars > t2.stars)and(t1.ratingdate>t2.ratingdate)and(t1.mid = t2.mid)and(t1.rid = t2.rid) natural join movie natural join reviewer;

@@ -1,1 +1,0 @@
-select distinct name,title,stars,ratingdate from rating natural join reviewer natural join movie order by name,title,stars ;

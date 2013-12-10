@@ -1,4 +1,0 @@
-SELECT t1.name FROM highschooler t1
-JOIN friend ON t1.Id = Id1
-JOIN highschooler t2 ON t2.Id = Id2
-where t2.name = 'Gabriel';

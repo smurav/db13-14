@@ -1,1 +1,0 @@
-select distinct year from rating natural join movie where (stars = 4) or (stars = 5) order by year;
