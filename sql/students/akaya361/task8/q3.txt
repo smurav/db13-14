@@ -1,0 +1,1 @@
+C->D,CD->A,AB->C,BD->A
