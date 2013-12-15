@@ -1,0 +1,4 @@
+BCD->E
+BDE->C
+BE->D
+BE->A
